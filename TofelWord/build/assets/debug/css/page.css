@@ -1,0 +1,18 @@
+
+.body-wrap{background: #323232; }
+
+.home{float:left; width:40px; height:32px; border-radius:5px; box-shadow:none;  background:url(../images/icons.png) 4px -246px no-repeat;}
+.content-wrap{text-align: center;  margin-top: 20px;}
+
+#p-home a{color:#888; text-decoration: none; text-shadow: none;}
+.icon{display: block; width: 32px; height: 32px; background:url(../images/icons.png) no-repeat; margin:0 auto; margin-top:5px; margin-bottom:3px;}
+.tile1{background-position:  -310px -743px;}
+.tile2{background-position: 0 -620px;}
+.tile3{background-position: -1001px -433px;}
+.tile4{background-position: -158px -686px;}
+.tile5{background-position: -155px -125px;}
+.tile6{background-position: -385px -433px;}
+.tile7{background-position: #3277B5}
+.tile8{background-position: #4C549F}
+.menu1{ display: inline-block;  width:128px; height:64px; background-color:#222; box-shadow: 0 0 10px #000; margin:10px; border-radius:10px;}
+
