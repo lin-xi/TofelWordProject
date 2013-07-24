@@ -16,20 +16,22 @@ public class WordtHandlerInterface extends BaseHandler{
     private WordDao dao;
     private Gson gson = new Gson();
 
-    public WordtHandlerInterface(Context context, Handler handler){
-        super(handler);
+    public WordtHandlerInterface(Context context){
+        super();
         dao = new WordDao(context);
     }
 
-    public void getCount(final String uid) {
+    public String getCount() {
         long count = dao.getCount();
-
-        response(uid, String.valueOf(count));
+        return String.valueOf(count);
     }
-    public  void getSentence(String uid, String start, String count){
+    public  String getSentence(String start, String count){
         List<Word> list = dao.query(Integer.parseInt(start), Integer.parseInt(count));
         String json = gson.toJson(list);
+        return json;
+    }
 
-        response(uid, json);
+    public String getPhoneNumber(){
+        return "15510103020";
     }
 }

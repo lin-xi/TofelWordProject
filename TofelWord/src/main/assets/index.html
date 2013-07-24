@@ -23,12 +23,14 @@
     </div>
 
     <div data-role="content" class="content-wrap">
-        <a href="#p-unit" data-transition="slide"  class="menu1"><span class="icon tile1"></span>记单词</a>
-        <a href="#two" data-transition="slide" class="menu1"><span class="icon tile2"></span>生词本</a><br>
-        <a href="#two" data-transition="slide" class="menu1"><span class="icon tile3"></span>常错单词</a>
-        <a href="#two" data-transition="slide" class="menu1"><span class="icon tile4"></span>我的成绩</a><br>
-        <a href="#two" data-transition="slide" class="menu1"><span class="icon tile5"></span>设置</a>
-        <a href="#two" data-transition="slide" class="menu1"><span class="icon tile6"></span>评价</a><br>
+        <a id="reciteWord" href="#p-unit" data-transition="slide"  class="menu1"><span class="icon tile1"></span>记单词</a>
+        <a id="unfamiliarWord" href="#two" data-transition="slide" class="menu1"><span class="icon tile2"></span>生词本</a><br>
+        <a id="wrongWord" href="#two" data-transition="slide" class="menu1"><span class="icon tile3"></span>常错单词</a>
+        <a id="score"  href="#two" data-transition="slide" class="menu1"><span class="icon tile4"></span>我的成绩</a><br>
+        <a id="setting"  href="#two" data-transition="slide" class="menu1"><span class="icon tile5"></span>设置</a>
+        <a id="rank"  href="#two" data-transition="slide" class="menu1"><span class="icon tile6"></span>评价</a><br>
+
+        <div id="debugInfo"></div>
     </div>
 
     <div data-role="footer" data-theme="a">
@@ -41,7 +43,7 @@
 <div data-role="page" id="p-unit" class="body-wrap">
 
     <div data-role="header">
-        <a href="#p-home" data-transition="slide"><span class="logo" src ="images/logo.png"></span></a>
+        <a href="#p-home" data-transition="slide" class="home"></a>
         <h1>托福单词</h1>
     </div>
 
@@ -49,15 +51,10 @@
 
         <div data-role="content">
             <div class="ui-grid-b">
-                <div class="ui-block-a">
-                    <a data-role="button" href="#p-word" data-transition="slide">1</a>
+                <div id="unit-wraper" class="ui-block-a">
+
                 </div>
-                <div class="ui-block-b">
-                    <a data-role="button" href="#p-word" data-transition="slide">2</a>
-                </div>
-                <div class="ui-block-c">
-                    <a data-role="button" href="#p-word" data-transition="slide">3</a>
-                </div>
+                <div id="debugInfo2" class="debug"></div>
             </div>
         </div>
 
@@ -73,7 +70,7 @@
 <!-- 第二页 记单词 -->
 <div data-role="page" id="p-word" class="body-wrap">
     <div data-role="header">
-        <a href="#p-home" data-transition="slide"><span class="logo" src ="images/logo.png"></span></a>
+        <a href="#p-home" data-transition="slide" class="home"></a>
         <h1>记单词</h1>
         <a data-role="button" href="#two" data-transition="slide" class="ui-btn-right">Button</a>
     </div>
@@ -158,19 +155,26 @@
 <script type="text/javascript">
     var queue = {}, _uuid=1;
 
-    function initPageUnit(){
-        request('wordInterface.getCount', [], function(amount){
-            alert(amount);
-        })
-    }
+    $('body').ready(function(){
+        var wi = window.wordInterface;
+        $('#debugInfo').text("success");
 
-    function request(api, args, callback){
-        var uid = guid();
-        queue[uid] = callback;
-        var pkgs = api.split('.');
-        var newArgs = [uid].concat(args);
-        window[pkgs[0]][pkgs[1]].apply(null, newArgs);
-    }
+        //记单词
+        $('#reciteWord').on('click', function(){
+            var log = $('#debugInfo2');
+            log.html('log2');
+
+            var count = wi.getCount();
+            log.html(count);
+            var total = Math.ceil(count/30);
+            var par = $('#unit-wraper');
+            for(var i=0; i<total; i++){
+                $('<a data-role="button" href="#p-word" data-transition="slide">'+ (i+1) +'</a>').appendTo(par);
+            }
+        });
+    });
+
+
     function response(){
         var uid = argument.splice(0, 1);
         var res = queue[uid];

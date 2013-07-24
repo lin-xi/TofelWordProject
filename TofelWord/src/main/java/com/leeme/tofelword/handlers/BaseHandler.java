@@ -8,20 +8,7 @@ import android.os.Message;
  * BaseHandler
  */
 public class BaseHandler {
-    private Handler mHandler;
-    public BaseHandler(Handler handler){
-        mHandler = handler;
+    public BaseHandler(){
     }
 
-    protected void response(String uid, String result){
-        Bundle bl = new Bundle();
-        bl.putString("uid", uid);
-        bl.putInt("code", 200);
-        bl.putString("content", result);
-
-        Message msg = new Message();
-        msg.what = 200;
-        msg.setData(bl);
-        mHandler.sendMessage(msg);
-    }
 }

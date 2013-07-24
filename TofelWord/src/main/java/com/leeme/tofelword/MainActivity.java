@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.webkit.WebSettings;
@@ -20,14 +21,19 @@ public class MainActivity extends Activity {
     private Handler mHandler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
-            switch(msg.what){
-                case 200:
-                    Bundle bl = msg.getData();
-                    String param = bl.getString("uid") + ",{'code':200, 'content': "+ bl.getInt("result") + "}";
-                    mWebView.loadUrl("javascript:response("+param+")");
-                    break;
+            try{
+                switch(msg.what){
+                    case 200:
+                        Bundle bl = msg.getData();
+                        String param = bl.getString("uid") + ",{'code':200, 'content': "+ bl.getInt("result") + "}";
+                        mWebView.loadUrl("javascript:response("+param+")");
+                        break;
+                }
+                super.handleMessage(msg);
+            }catch (NullPointerException ex){
+
             }
-            super.handleMessage(msg);
+
         }
     };
 
@@ -42,9 +48,12 @@ public class MainActivity extends Activity {
         mWebView.setWebViewClient(new MyWebViewClient());
 
         Context ctx = getBaseContext();
-        mWebView.addJavascriptInterface(new WordtHandlerInterface(ctx, mHandler), "wordInterface");
-        mWebView.addJavascriptInterface(new SentenceHandlerInterface(ctx, mHandler), "sentenceInterface");
+        mWebView.addJavascriptInterface(new WordtHandlerInterface(ctx), "wordInterface");
+        mWebView.addJavascriptInterface(new SentenceHandlerInterface(ctx), "sentenceInterface");
         mWebView.loadUrl("file:///android_asset/index.html");
+
+        WordtHandlerInterface word = new WordtHandlerInterface(ctx);
+        Log.d("tofelword", word.getCount());
     }
 
     private class MyWebViewClient extends WebViewClient {

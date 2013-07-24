@@ -15,22 +15,20 @@ import java.util.List;
 public class SentenceHandlerInterface extends BaseHandler{
     private SentenceDao dao;
 
-    public SentenceHandlerInterface(Context context, Handler handler) {
-        super(handler);
+    public SentenceHandlerInterface(Context context) {
+        super();
         dao = new SentenceDao(context);
     }
 
-    public void getCount(final String uid) {
+    public String getCount() {
         long count = dao.getCount();
-
-        response(uid, String.valueOf(count));
+        return String.valueOf(count);
     }
 
-    public void getSentence(String uid, final String word){
+    public String getSentence(final String word){
         List<Sentence> list = dao.query(word);
         Gson gson = new Gson();
         String json = gson.toJson(list);
-
-        response(uid, json);
+        return json;
     }
 }
