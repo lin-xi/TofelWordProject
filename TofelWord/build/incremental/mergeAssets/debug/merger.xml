@@ -54,6 +54,15 @@
             <file
                 name="images/icons.png"
                 path="E:\Work\workspace\android\TofelWordProject\TofelWord\src\main\assets\images\icons.png" />
+            <file
+                name="db/words.db"
+                path="E:\Work\workspace\android\TofelWordProject\TofelWord\src\main\assets\db\words.db" />
+            <file
+                name="db/sentences.db"
+                path="E:\Work\workspace\android\TofelWordProject\TofelWord\src\main\assets\db\sentences.db" />
+            <file
+                name="js/component/Dialog.js"
+                path="E:\Work\workspace\android\TofelWordProject\TofelWord\src\main\assets\js\component\Dialog.js" />
         </source>
     </dataSet>
     <dataSet config="debug" >

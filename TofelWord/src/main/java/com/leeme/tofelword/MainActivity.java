@@ -8,9 +8,11 @@ import android.os.Message;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
+import android.webkit.ConsoleMessage;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 import com.leeme.tofelword.handlers.SentenceHandlerInterface;
 import com.leeme.tofelword.handlers.WordtHandlerInterface;
@@ -21,39 +23,42 @@ public class MainActivity extends Activity {
     private Handler mHandler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
-            try{
-                switch(msg.what){
-                    case 200:
-                        Bundle bl = msg.getData();
-                        String param = bl.getString("uid") + ",{'code':200, 'content': "+ bl.getInt("result") + "}";
-                        mWebView.loadUrl("javascript:response("+param+")");
-                        break;
-                }
-                super.handleMessage(msg);
-            }catch (NullPointerException ex){
-
+        try{
+            switch(msg.what){
+                case 200:
+                    Bundle bl = msg.getData();
+                    String param = bl.getString("uid") + ",{'code':200, 'content': "+ bl.getInt("result") + "}";
+                    mWebView.loadUrl("javascript:response("+param+")");
+                    break;
             }
+            super.handleMessage(msg);
+        }catch (NullPointerException ex){
+
+        }
 
         }
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("tofelword", "onCreate");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         mWebView = (WebView) this.findViewById(R.id.webView);
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        mWebView.canGoBack();
         mWebView.setWebViewClient(new MyWebViewClient());
 
         Context ctx = getBaseContext();
         mWebView.addJavascriptInterface(new WordtHandlerInterface(ctx), "wordInterface");
         mWebView.addJavascriptInterface(new SentenceHandlerInterface(ctx), "sentenceInterface");
+
+        Log.d("tofelword", "loadUrl");
         mWebView.loadUrl("file:///android_asset/index.html");
 
-        WordtHandlerInterface word = new WordtHandlerInterface(ctx);
-        Log.d("tofelword", word.getCount());
     }
 
     private class MyWebViewClient extends WebViewClient {
@@ -61,6 +66,48 @@ public class MainActivity extends Activity {
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             view.loadUrl(url);
             return true;
+        }
+
+        @Override
+        public void onLoadResource(WebView view, String url) {
+            // Check to see if there is a progress dialog
+        /*
+        if (progressDialog == null) {
+            // If no progress dialog, make one and set message
+            progressDialog = new ProgressDialog(activity);
+            progressDialog.setMessage("Loading please wait...");
+            progressDialog.show();
+
+            // Hide the webview while loading
+            webview.setEnabled(false);
+        }
+        */
+        }
+
+        @Override
+        public void onPageFinished(WebView view, String url) {
+            // Page is done loading;
+            // hide the progress dialog and show the webview
+        /*
+        if (progressDialog.isShowing()) {
+            progressDialog.dismiss();
+            progressDialog = null;
+            webview.setEnabled(true);
+        }
+        */
+        }
+
+        public boolean onConsoleMessage(ConsoleMessage cm) {
+            String msg = cm.message() + " -- From line "+ cm.lineNumber() + " of "+ cm.sourceId();
+            Log.d("tofelword", msg);
+            Toast.makeText(getBaseContext(), msg, Toast.LENGTH_LONG).show();
+
+            return true;
+        }
+
+        @Override
+        public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+            Toast.makeText(MainActivity.this, "Oh no! " + description, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -72,11 +119,9 @@ public class MainActivity extends Activity {
     }
 
     @Override
-    //设置回退
-    //覆盖Activity类的onKeyDown(int keyCoder,KeyEvent event)方法
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if ((keyCode == KeyEvent.KEYCODE_BACK) && mWebView.canGoBack()) {
-            mWebView.goBack(); //goBack()表示返回WebView的上一页面
+            mWebView.goBack();
             return true;
         }
         return false;

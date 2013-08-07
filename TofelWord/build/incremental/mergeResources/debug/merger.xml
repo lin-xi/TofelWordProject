@@ -39,6 +39,16 @@
                 qualifiers=""
                 type="menu" />
             <file
+                name="sentences"
+                path="E:\Work\workspace\android\TofelWordProject\TofelWord\src\main\res\raw\sentences.db"
+                qualifiers=""
+                type="raw" />
+            <file
+                name="words"
+                path="E:\Work\workspace\android\TofelWordProject\TofelWord\src\main\res\raw\words.db"
+                qualifiers=""
+                type="raw" />
+            <file
                 path="E:\Work\workspace\android\TofelWordProject\TofelWord\src\main\res\values\dimens.xml"
                 qualifiers="" >
                 <dimen name="activity_horizontal_margin" >16dp

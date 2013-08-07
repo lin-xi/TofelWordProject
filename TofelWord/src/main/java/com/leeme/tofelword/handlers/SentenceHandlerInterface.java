@@ -20,12 +20,7 @@ public class SentenceHandlerInterface extends BaseHandler{
         dao = new SentenceDao(context);
     }
 
-    public String getCount() {
-        long count = dao.getCount();
-        return String.valueOf(count);
-    }
-
-    public String getSentence(final String word){
+    public String getSentence(String word){
         List<Sentence> list = dao.query(word);
         Gson gson = new Gson();
         String json = gson.toJson(list);

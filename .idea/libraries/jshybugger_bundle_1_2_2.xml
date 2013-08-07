@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jshybugger-bundle-1.2.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/TofelWord/libs/jshybugger-bundle-1.2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

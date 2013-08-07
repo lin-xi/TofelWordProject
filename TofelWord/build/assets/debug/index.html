@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/page.css" />
     <script src="js/jquery-1.10.1.min.js"></script>
     <script src="js/jquery.mobile-1.3.1.min.js"></script>
+    <script src="js/component/Dialog.js"></script>
 
 </head>
 
@@ -18,23 +19,17 @@
 <div data-role="page" id="p-home" class="body-wrap">
 
     <div data-role="header">
-        <a href="#p-home" data-transition="slide" class="home"></a>
         <h1>托福单词</h1>
     </div>
 
-    <div data-role="content" class="content-wrap">
-        <a id="reciteWord" href="#p-unit" data-transition="slide"  class="menu1"><span class="icon tile1"></span>记单词</a>
-        <a id="unfamiliarWord" href="#two" data-transition="slide" class="menu1"><span class="icon tile2"></span>生词本</a><br>
-        <a id="wrongWord" href="#two" data-transition="slide" class="menu1"><span class="icon tile3"></span>常错单词</a>
-        <a id="score"  href="#two" data-transition="slide" class="menu1"><span class="icon tile4"></span>我的成绩</a><br>
-        <a id="setting"  href="#two" data-transition="slide" class="menu1"><span class="icon tile5"></span>设置</a>
-        <a id="rank"  href="#two" data-transition="slide" class="menu1"><span class="icon tile6"></span>评价</a><br>
+    <div id="main-menu" data-role="content" class="content-wrap">
+        <a id="reciteWord" href="#p-unit" data-transition="slide"  class="reset-a"><span class="icon tile1"></span>记单词</a>
+        <a id="unfamiliarWord" href="#two" data-transition="slide" class="reset-a"><span class="icon tile2"></span>生词本</a><br>
+        <a id="wrongWord" href="#two" data-transition="slide" class="reset-a"><span class="icon tile3"></span>常错单词</a>
+        <a id="score"  href="#two" data-transition="slide" class="reset-a"><span class="icon tile4"></span>我的成绩</a><br>
+        <a id="setting"  href="#two" data-transition="slide" class="reset-a"><span class="icon tile5"></span>设置</a>
+        <a id="rank"  href="#two" data-transition="slide" class="reset-a"><span class="icon tile6"></span>评价</a><br>
 
-        <div id="debugInfo"></div>
-    </div>
-
-    <div data-role="footer" data-theme="a">
-        <h4>Page Footer</h4>
     </div>
 
 </div>
@@ -43,18 +38,14 @@
 <div data-role="page" id="p-unit" class="body-wrap">
 
     <div data-role="header">
-        <a href="#p-home" data-transition="slide" class="home"></a>
+        <a href="#p-home" data-transition="slide" class="home reset-a"></a>
         <h1>托福单词</h1>
     </div>
 
     <div data-role="content" class="content-wrap">
 
-        <div data-role="content">
-            <div class="ui-grid-b">
-                <div id="unit-wraper" class="ui-block-a">
-
-                </div>
-                <div id="debugInfo2" class="debug"></div>
+        <div class="ui-grid-b">
+            <div id="unit-wraper"  class="ui-block-a">
             </div>
         </div>
 
@@ -70,20 +61,19 @@
 <!-- 第二页 记单词 -->
 <div data-role="page" id="p-word" class="body-wrap">
     <div data-role="header">
-        <a href="#p-home" data-transition="slide" class="home"></a>
+        <a href="#p-unit" data-transition="slide" class="unitlist reset-a"></a>
         <h1>记单词</h1>
-        <a data-role="button" href="#two" data-transition="slide" class="ui-btn-right">Button</a>
     </div>
 
-    <div data-role="content" class="content-wrap">
+    <div data-role="content">
 
-        <ul data-role="listview" data-divider-theme="c" data-inset="true">
-            <li data-role="list-divider" role="heading">
+        <ul data-role="listview" data-divider-theme="d" data-inset="true">
+            <li id="cword" data-role="list-divider" role="heading">
                 Divider
             </li>
-            <li data-theme="c">
-                <p>音标</p>
-                <p>释义</p>
+            <li data-theme="d">
+                <span id="cpronounce">音标</span><br>
+                <span id="cmeaning">释义</span><br>
 
                 <div data-role="fieldcontain">
                     <fieldset data-role="controlgroup" data-type="horizontal">
@@ -106,84 +96,130 @@
             <li data-role="list-divider" role="heading">
                 例句
             </li>
-            <li data-theme="c">
-                <p>例句</p>
+            <li id="sentence"  data-theme="d">
             </li>
         </ul>
 
-
-        <div data-role="navbar" data-iconpos="top">
+       <div data-role="navbar" data-iconpos="top">
             <ul>
                 <li>
-                    <a href="#page1" data-transition="fade" data-icon="">上一个</a>
+                    <a id="prev" href="#page1" data-transition="fade" data-theme="d" data-icon="arrow-l">
+                        上一个
+                    </a>
                 </li>
                 <li>
-                    <a href="#page1" data-transition="fade" data-icon="">下一个</a>
+                    <a id="next" href="#page1" data-transition="fade" data-theme="d" data-icon="arrow-r">
+                        下一个
+                    </a>
                 </li>
             </ul>
         </div>
         
     </div>
-    
-    <div data-role="footer">
-        <h4>Page Footer</h4>
-    </div>
+
 </div>
 
 
 
-
-
-<!-- Start of third page: #popup -->
-<div data-role="page" id="popup">
-
-        <div data-role="header" data-theme="e">
-            <h1>Dialog</h1>
-        </div><!-- /header -->
-
-        <div data-role="content" data-theme="d">
-            <h2>Popup</h2>
-            <p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>
-            <p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to page "one"</a></p>
-        </div><!-- /content -->
-
-        <div data-role="footer">
-            <h4>Page Footer</h4>
-        </div><!-- /footer -->
-    </div><!-- /page popup -->
-
 <script type="text/javascript">
-    var queue = {}, _uuid=1;
+    var DISPLAY_COUNT = 10;
+
+/*
+    window.wordInterface = {};
+    window.wordInterface.getCount = function(){return 3018;}
+    window.wordInterface.getWords = function(){return '[{"cword":"linxi", "cpronounce":"linxi", "cmeaning":"linxi"}, {"cword":"linxi2", "cpronounce":"linxi2", "cmeaning":"linxi2"}, {"cword":"linxi3", "cpronounce":"linxi3", "cmeaning":"linxi3"}]';}
+    window.wordInterface.getWord = function(){return '{"cword":"linxi", "cpronounce":"linxi", "cmeaning":"linxi"}';}
+    window.wordInterface.getStudyLogs = function(){return '[{"unit":"1", "count":"3"}]';}
+
+    window.sentenceInterface = {};
+    window.sentenceInterface.getSentence = function(){return '[{"cword":"linxi", "cpronounce":"linxi", "cmeaning":"linxi"}, {"cword":"linxi2", "cpronounce":"linxi2", "cmeaning":"linxi2"}, {"cword":"linxi3", "cpronounce":"linxi3", "cmeaning":"linxi3"}]';}
+*/
 
     $('body').ready(function(){
-        var wi = window.wordInterface;
+        var wi = window.wordInterface,
+            si = window.sentenceInterface;
+
+        var cache = {};
+
         $('#debugInfo').text("success");
 
         //记单词
         $('#reciteWord').on('click', function(){
-            var log = $('#debugInfo2');
-            log.html('log2');
-
             var count = wi.getCount();
-            log.html(count);
-            var total = Math.ceil(count/30);
+            var logs = $.parseJSON(wi.getStudyLogs());
+
+            var total = Math.ceil(count/DISPLAY_COUNT);
             var par = $('#unit-wraper');
+            par.empty();
             for(var i=0; i<total; i++){
-                $('<a data-role="button" href="#p-word" data-transition="slide">'+ (i+1) +'</a>').appendTo(par);
+                $('<a class="wordUnit reset-a" href="#p-word" data-transition="slide">'+ (i+1) +'</a>').appendTo(par);
+            }
+
+            var wunits = $('.wordUnit');
+            for(var i=0; i<logs.length; i++){
+                var log = logs[i];
+                wunits.eq(log.unit-1).css('background-color', '#996633');
             }
         });
+
+        $('#unit-wraper').on('click', function(e){
+            var tar = $(e.target);
+
+            if(tar.hasClass('wordUnit')){
+                var unit = tar.text();
+                setValue(unit);
+            }
+
+            function setValue(i){
+                cache.currentUnit = i;
+                cache.currentIndex = 1;
+                displayWord();
+            }
+        });
+
+        $('#prev').on('click', function(e){
+            if(cache.currentIndex>1){
+                cache.currentIndex--;
+                displayWord();
+            }
+        });
+        $('#next').on('click', function(e){
+            if(cache.currentIndex<DISPLAY_COUNT){
+                cache.currentIndex++;
+                displayWord();
+            }else{
+                Dialog.alert('本单元已学习完成');
+                wi.addStudyLog(cache.currentUnit, Math.round(new Date().getTime()/1000)+'', 1, 0, 0);
+            }
+        });
+
+        function displayWord(){
+            var result = wi.getWord((cache.currentUnit-1)*30+cache.currentIndex);
+            var cw =$.parseJSON(result);
+
+            cache.currentWord = cw;
+
+            $('#cword').html(cw.word);
+            $('#cpronounce').html(cw.pronounce);
+            $('#cmeaning').html(cw.meaning);
+
+            var senResult = si.getSentence(cw.word);
+            var sen =$.parseJSON(senResult);
+            var par = $('#sentence');
+            par.empty();
+            for(var i=0, ii=sen.length; i<ii; i++){
+                var str = sen[i].sentences;
+                if(str && str != ''){
+                    var arr = str.split('|');
+                    if(arr.length > 1){
+                        $('<span class="sentenceItem">'+ arr[0]+ '<br>'+ arr[1] +'</span>').appendTo(par);
+                    }
+                }
+            }
+
+        }
     });
 
-
-    function response(){
-        var uid = argument.splice(0, 1);
-        var res = queue[uid];
-        if(res){res.apply(null, argument);}
-        delete queue[uid];
-    }
-    function guid(){
-        return _uuid++;
-    }
 </script>
 
 </body>
