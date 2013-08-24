@@ -47,8 +47,8 @@ var Dialog = (function($){
     }
 
     return {
-        alert: function(cont){
-            create(cont, function(){});
+        alert: function(cont, func){
+            create(cont, func);
         },
         confirm: function(cont, func){
             create(cont, func);

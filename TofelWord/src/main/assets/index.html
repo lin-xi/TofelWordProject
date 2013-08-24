@@ -29,7 +29,6 @@
         <a id="score"  href="#two" data-transition="slide" class="reset-a"><span class="icon tile4"></span>我的成绩</a><br>
         <a id="setting"  href="#two" data-transition="slide" class="reset-a"><span class="icon tile5"></span>设置</a>
         <a id="rank"  href="#two" data-transition="slide" class="reset-a"><span class="icon tile6"></span>评价</a><br>
-
     </div>
 
 </div>
@@ -123,6 +122,7 @@
 
 <script type="text/javascript">
     var DISPLAY_COUNT = 10;
+    var cache = {};
 
 /*
     window.wordInterface = {};
@@ -138,8 +138,6 @@
     $('body').ready(function(){
         var wi = window.wordInterface,
             si = window.sentenceInterface;
-
-        var cache = {};
 
         $('#debugInfo').text("success");
 
@@ -165,6 +163,8 @@
         $('#unit-wraper').on('click', function(e){
             var tar = $(e.target);
 
+            cache.page = "word";
+
             if(tar.hasClass('wordUnit')){
                 var unit = tar.text();
                 setValue(unit);
@@ -172,7 +172,13 @@
 
             function setValue(i){
                 cache.currentUnit = i;
-                cache.currentIndex = 1;
+
+                var json = $.parseJSON(wi.getStatus(i));
+                if(json && json.lastWordIndex){
+                    cache.currentIndex = json.lastWordIndex;
+                }else{
+                    cache.currentIndex = 1;
+                }
                 displayWord();
             }
         });
@@ -188,10 +194,21 @@
                 cache.currentIndex++;
                 displayWord();
             }else{
-                Dialog.alert('本单元已学习完成');
-                wi.addStudyLog(cache.currentUnit, Math.round(new Date().getTime()/1000)+'', 1, 0, 0);
+                Dialog.alert('本单元已学习完成', function(){
+                    $.mobile.navigate( "#p-unit" );
+                    wi.addStudyLog(cache.currentUnit, Math.round(new Date().getTime()/1000)+'', 1, 0, 0);
+                });
             }
         });
+
+        function keydown(e){
+            var g = cache;
+
+            if(g.page == 'word'){
+                wi.addStudyStatus(g.currentUnit ,g.currentIndex);
+            }
+            window.history.go(-1);
+        }
 
         function displayWord(){
             var result = wi.getWord((cache.currentUnit-1)*30+cache.currentIndex);

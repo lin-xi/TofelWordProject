@@ -1,11 +1,11 @@
 # incremental data. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1375022882083 2317 d4197e58bd863e51e8a8444f5e701c4d9b1a185e E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\handlers\WordtHandlerInterface.class
 1374909353973 1845 259c21d55703fabafaa72881b937ec29c8071c58 E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\db\dao\SentenceDao.class
+1377186059879 2927 9c89f60647ca95bab2d699b536929f968b5a784e E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\handlers\WordtHandlerInterface.class
 1374751687627 732 c30607b2a3ad2e6a98f30b0323787dfb05b921f5 E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\R.class
 1374902220564 2479 9728b63fc7305aa25ff4633bebfabc67bd2e37ac E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\MainActivity$MyWebViewClient.class
-1374902239789 2716 5094885cd85e5fcdd02a39b68e0725b378cb5ba8 E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\MainActivity.class
+1377183609366 2725 ba07859b1862ad0ff60326050924ef08a033a22e E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\MainActivity.class
 1371656205211 343 33b94fb9c8d9b36603fbfef2d6efbae10bf36359 E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\R$attr.class
 1375023696168 4126 5f77a3280ca081049f3770776d5d53bac3b25c29 E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\db\dao\WordDao.class
 1374892128316 1663 bcd2b7210e2d0d047e0592bed87651bc38868ba4 E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\MainActivity$1.class
@@ -15,6 +15,8 @@
 1375019550140 738 a6a60ad52c534439f949c6fadee2300f484b81ac E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\db\dto\Studylog.class
 1374766222961 2578 1c42fee481456ae1c1057e708460f342a974309d E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\db\DBHelper.class
 1371656205183 1123 250227d756e4521939758288f152352bbe8c6608 E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\db\dto\Word.class
+1377186059849 2061 040e43e059febef058f2dc5b7882c54f14809738 E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\db\dao\StudyStatusDao.class
+1377184562536 714 eefb6db1123b5a4666ecd57e4f2e3464e3892f7b E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\db\dto\StudyStatus.class
 1368427146000 190418 973e832af433b44c3ed11c426f2f390b29f3f3f8 E:\Work\workspace\android\TofelWordProject\TofelWord\libs\gson-2.2.4.jar
 1374751687623 391 fbc8f400d1834e141af0e5d763a508ba0f797448 E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\R$menu.class
 1374751687619 464 f3ad377dc89944a1da9216f1f936528aaab0ea5f E:\Work\workspace\android\TofelWordProject\TofelWord\build\classes\debug\com\leeme\tofelword\R$dimen.class

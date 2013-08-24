@@ -121,8 +121,11 @@ public class MainActivity extends Activity {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if ((keyCode == KeyEvent.KEYCODE_BACK) && mWebView.canGoBack()) {
-            mWebView.goBack();
+            //mWebView.goBack();
+            mWebView.loadUrl("javascript:keydown()");
             return true;
+        }else{
+
         }
         return false;
     }
