@@ -1,0 +1,20 @@
+html {
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:none;
+	-webkit-overflow-scrolling:touch
+}
+body{overflow: hidden;}
+
+.app-box{position:absolute; left:0; top:0; width:100%; height: 100%;}
+.app-box:after, .page-content:after {content: ""; display: block; height: 0; line-height: 0; visibility: hidden;}
+.page-box{position:absolute; left:0; top:0; width:100%; height: 100%; display:none;}
+
+.page-header{height: 50px; line-height: 50px; width: 100%; background-color: #222; color: #FFF; text-align: center;}
+.page-header a{position: absolute; left:10px; width: 40px; height: 40px; }
+.page-header a:hover{}
+
+
+.page-foot{width: 100%; background-color: #666; padding: 10px;}
+.page-content{position: relative; width: 100%; overflow-y: auto; background-color: #e0e0e0;}

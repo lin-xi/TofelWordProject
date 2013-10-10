@@ -2,137 +2,135 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TOFEL words</title>
-    <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
-    <link rel="stylesheet" href="css/jquery.mobile.structure-1.3.1.min.css" />
+    <meta charset="utf-8" />
+    <meta name="Copyright" content="Linxi" />
+    <meta name="Description" content="托福记单词" />
+    <meta name="Keywords" content="托福记单词" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>托福记单词</title>
+
+    <link rel="stylesheet" href="css/mobile.css" />
     <link rel="stylesheet" href="css/page.css" />
-    <script src="js/jquery-1.10.1.min.js"></script>
-    <script src="js/jquery.mobile-1.3.1.min.js"></script>
-    <script src="js/component/Dialog.js"></script>
+    <link rel="stylesheet" href="css/icon.css" />
 
 </head>
 
 <body>
-
-<div data-role="page" id="p-home" class="body-wrap">
-
-    <div data-role="header">
-        <h1>托福单词</h1>
-    </div>
-
-    <div id="main-menu" data-role="content" class="content-wrap">
-        <a id="reciteWord" href="#p-unit" data-transition="slide"  class="reset-a"><span class="icon tile1"></span>记单词</a>
-        <a id="unfamiliarWord" href="#two" data-transition="slide" class="reset-a"><span class="icon tile2"></span>生词本</a><br>
-        <a id="wrongWord" href="#two" data-transition="slide" class="reset-a"><span class="icon tile3"></span>常错单词</a>
-        <a id="score"  href="#two" data-transition="slide" class="reset-a"><span class="icon tile4"></span>我的成绩</a><br>
-        <a id="setting"  href="#two" data-transition="slide" class="reset-a"><span class="icon tile5"></span>设置</a>
-        <a id="rank"  href="#two" data-transition="slide" class="reset-a"><span class="icon tile6"></span>评价</a><br>
-    </div>
-
-</div>
-
-<!-- 第二页 单元列表 -->
-<div data-role="page" id="p-unit" class="body-wrap">
-
-    <div data-role="header">
-        <a href="#p-home" data-transition="slide" class="home reset-a"></a>
-        <h1>托福单词</h1>
-    </div>
-
-    <div data-role="content" class="content-wrap">
-
-        <div class="ui-grid-b">
-            <div id="unit-wraper"  class="ui-block-a">
-            </div>
-        </div>
-
-    </div>
-
-    <div data-role="footer" data-theme="a">
-        <h4>Page Footer</h4>
-    </div>
-
-</div>
-
-
-<!-- 第二页 记单词 -->
-<div data-role="page" id="p-word" class="body-wrap">
-    <div data-role="header">
-        <a href="#p-unit" data-transition="slide" class="unitlist reset-a"></a>
-        <h1>记单词</h1>
-    </div>
-
-    <div data-role="content">
-
-        <ul data-role="listview" data-divider-theme="d" data-inset="true">
-            <li id="cword" data-role="list-divider" role="heading">
-                Divider
-            </li>
-            <li data-theme="d">
-                <span id="cpronounce">音标</span><br>
-                <span id="cmeaning">释义</span><br>
-
-                <div data-role="fieldcontain">
-                    <fieldset data-role="controlgroup" data-type="horizontal">
-                        <input id="radio1" name="" value="" data-theme="c" type="radio">
-                        <label for="radio1">
-                            生词
-                        </label>
-                        <input id="radio2" name="" value="radio2" data-theme="c" type="radio">
-                        <label for="radio2">
-                            一般
-                        </label>
-                        <input id="radio3" name="" value="radio3" data-theme="c" type="radio">
-                        <label for="radio3">
-                            已记住
-                        </label>
-                    </fieldset>
+    <div class="app-box">
+        <!--首页开始 -->
+        <div class="page-box" id="index">
+            <div class="page-right">
+                <div class="score-wraper1">
+                    <div class="score">
+                        <div class="de"><div class="den"><div class="dene"><div class="denem"><div class="deneme" id="unitNumber">3</div></div></div></div></div>
+                    </div>
+                </div>
+                <div class="score-wraper2">
+                    <div class="score">
+                        <div class="de"><div class="den"><div class="dene"><div class="denem"><div class="deneme" id="wordNumber">4500</div></div></div></div></div>
+                    </div>
                 </div>
 
-            </li>
-            <li data-role="list-divider" role="heading">
-                例句
-            </li>
-            <li id="sentence"  data-theme="d">
-            </li>
-        </ul>
+            </div>
 
-       <div data-role="navbar" data-iconpos="top">
-            <ul>
-                <li>
-                    <a id="prev" href="#page1" data-transition="fade" data-theme="d" data-icon="arrow-l">
-                        上一个
-                    </a>
-                </li>
-                <li>
-                    <a id="next" href="#page1" data-transition="fade" data-theme="d" data-icon="arrow-r">
-                        下一个
-                    </a>
-                </li>
-            </ul>
+            <div class="page-left">
+                <div class="menu-item avatar"><img src="images/avatar.png" width="60px" height="60px"/></div>
+                <a id="wordunit" class="menu-item index"><span class="icon i-word"></span><span class="menu-text">记单词</span></a>
+                <a id="statistic" class="menu-item statistic"><span class="icon i-statistic"></span><span class="menu-text">统计</span></a>
+                <a id="setting" class="menu-item setting"><span class="icon i-setting"></span><span class="menu-text">设置</span></a>
+                <a id="share" class="menu-item share"><span class="icon i-share"></span><span class="menu-text">分享</span></a>
+            </div>
+            <div class="page-center">
+                <div class="menu-item avatar"></div>
+                <a class="menu-item index"></a>
+                <a class="menu-item statistic"></a>
+                <a class="menu-item setting"></a>
+                <a class="menu-item share"></a>
+            </div>
         </div>
-        
+        <!--首页结束-->
+
+        <!--单元列表开始 -->
+        <div class="page-box" id="units">
+            <div class="page-header">
+                <a href="#index"><i class="icon-home"></i></a>
+                <h3>托福单词</h3>
+            </div>
+
+            <div class="page-content">
+                <ul id="unit-wraper">
+                </ul>
+            </div>
+
+        </div>
+        <!--单元列表结束 -->
+
+        <!--单词详情页开始 -->
+        <div class="page-box" id="word">
+
+            <div class="page-header">
+                <a href="#units"><i class="icon-grid"></i></a>
+                <h3>单词</h3>
+            </div>
+
+            <div class="page-content">
+                <div class="outbox word-detail">
+                    <div class="outbox-header">
+                        <h3 id="cword"></h3>
+                    </div>
+
+                    <div class="outbox—content">
+                        <p id="cpronounce">音标</p>
+                        <p id="cmeaning">释义</p>
+                        <div class="button-area">
+                            <a class="btn"><i class="icon-sad"></i>&nbsp;不认识</a>
+                            <a class="btn"><i class="icon-neutral"></i>&nbsp;有印象</a>
+                            <a class="btn"><i class="icon-happy"></i>&nbsp;so easy</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="outbox word-detail">
+                    <div class="outbox-header">
+                        <h3>例句</h3>
+                    </div>
+
+                    <div class="outbox—content">
+                        <ul id="sentence">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-foot">
+                <div class="nav">
+                    <a id="prev" class="btn btn-red"><i class="icon-chevron-sign-left"></i>&nbsp上一个</a>
+                    <a id="next" class="btn btn-red">下一个&nbsp;<i class="icon-chevron-sign-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+        <!--单词详情页结束-->
     </div>
 
-</div>
 
-
-
+<script src="js/zepto.js"></script>
+<script src="js/mobile.js"></script>
 <script type="text/javascript">
     var DISPLAY_COUNT = 10;
     var cache = {};
 
 /*
     window.wordInterface = {};
-    window.wordInterface.getCount = function(){return 3018;}
+    window.wordInterface.getUnits = function(){return '[{"id":"0", "unit":"0", "yesRate":"0", "reviewLevel":"0", "studyFlag":"0", "lastWordIndex":"0"}, {"id":"1", "unit":"1", "yesRate":"0", "reviewLevel":"0", "studyFlag":"0", "lastWordIndex":"0"}, {"id":"2", "unit":"2", "yesRate":"0", "reviewLevel":"0", "studyFlag":"0", "lastWordIndex":"0"}, {"id":"3", "unit":"3", "yesRate":"0", "reviewLevel":"0", "studyFlag":"0", "lastWordIndex":"0"}, {"id":"4", "unit":"4", "yesRate":"0", "reviewLevel":"0", "studyFlag":"0", "lastWordIndex":"0"}]';}
     window.wordInterface.getWords = function(){return '[{"cword":"linxi", "cpronounce":"linxi", "cmeaning":"linxi"}, {"cword":"linxi2", "cpronounce":"linxi2", "cmeaning":"linxi2"}, {"cword":"linxi3", "cpronounce":"linxi3", "cmeaning":"linxi3"}]';}
-    window.wordInterface.getWord = function(){return '{"cword":"linxi", "cpronounce":"linxi", "cmeaning":"linxi"}';}
-    window.wordInterface.getStudyLogs = function(){return '[{"unit":"1", "count":"3"}]';}
+    window.wordInterface.getWord = function(){return '{"word":"linxi", "pronounce":"linxi", "meaning":"linxi"}';}
 
     window.sentenceInterface = {};
-    window.sentenceInterface.getSentence = function(){return '[{"cword":"linxi", "cpronounce":"linxi", "cmeaning":"linxi"}, {"cword":"linxi2", "cpronounce":"linxi2", "cmeaning":"linxi2"}, {"cword":"linxi3", "cpronounce":"linxi3", "cmeaning":"linxi3"}]';}
+    window.sentenceInterface.getSentence = function(){return '[{"sentences":"linxi|林溪一"}, {"sentences":"linxi2|林溪二"}, {"sentences":"linxi3|林溪三"}]';}
 */
 
     $('body').ready(function(){
@@ -141,57 +139,61 @@
 
         $('#debugInfo').text("success");
 
-        //记单词
-        $('#reciteWord').on('click', function(){
-            var count = wi.getCount();
-            var logs = $.parseJSON(wi.getStudyLogs());
+        var g = cache;
+        g.currentUnit = 0;
+        g.currentWord = 0;
 
-            var total = Math.ceil(count/DISPLAY_COUNT);
+        //记单词
+        $('#wordunit').on('click', function(){
+            
+            M.navigate('#units');
+
+            var template = '<li class="unit-item study_{{studyFlag}}" index="{{unit}}"><span class="unit">{{unit_label}}</span><span class="unit-desc"><p class="yesRate">{{yesRate}}</p><p class="level level-{{level}}"></p></span></li>';
+            var units = JSON.parse(wi.getUnits());
+
+            g.units = units;
+
             var par = $('#unit-wraper');
             par.empty();
-            for(var i=0; i<total; i++){
-                $('<a class="wordUnit reset-a" href="#p-word" data-transition="slide">'+ (i+1) +'</a>').appendTo(par);
-            }
+            for(var i=0, len=units.length; i<len; i++){
+                var un = units[i];
+                var data = {
+                    unit: un.unit,
+                    unit_label: un.unit-0+1,
+                    yesRate : un.yesRate,
+                    level : un.reviewLevl,
+                    studyFlag : un.studyFlag == 1 ? 'yes' : 'no'
+                }
 
-            var wunits = $('.wordUnit');
-            for(var i=0; i<logs.length; i++){
-                var log = logs[i];
-                wunits.eq(log.unit-1).css('background-color', '#996633');
+                par.append(M.render(template, data));
             }
         });
 
-        $('#unit-wraper').on('click', function(e){
-            var tar = $(e.target);
+        $('#unit-wraper').delegate('.unit-item', 'click', function(e){
+            
+            M.navigate('#word');
+            var g = cache;
+            var tar = $(e.currentTarget);
 
-            cache.page = "word";
+            g.page = "#word";
+            var unit = tar.attr('index');
+            g.currentUnit = g.units[unit];
+            g.currentWord = g.currentUnit.lastWordIndex-0;
 
-            if(tar.hasClass('wordUnit')){
-                var unit = tar.text();
-                setValue(unit);
-            }
-
-            function setValue(i){
-                cache.currentUnit = i;
-
-                var json = $.parseJSON(wi.getStatus(i));
-                if(json && json.lastWordIndex){
-                    cache.currentIndex = json.lastWordIndex;
-                }else{
-                    cache.currentIndex = 1;
-                }
-                displayWord();
-            }
+            displayWord();
         });
 
         $('#prev').on('click', function(e){
-            if(cache.currentIndex>1){
-                cache.currentIndex--;
+            var g = cache;
+            if(g.currentWord>1){
+                g.currentWord--;
                 displayWord();
             }
         });
         $('#next').on('click', function(e){
-            if(cache.currentIndex<DISPLAY_COUNT){
-                cache.currentIndex++;
+            var g = cache;
+            if(g.currentWord<DISPLAY_COUNT){
+                g.currentWord++;
                 displayWord();
             }else{
                 Dialog.alert('本单元已学习完成', function(){
@@ -201,20 +203,10 @@
             }
         });
 
-        function keydown(e){
-            var g = cache;
-
-            if(g.page == 'word'){
-                wi.addStudyStatus(g.currentUnit ,g.currentIndex);
-            }
-            window.history.go(-1);
-        }
-
         function displayWord(){
-            var result = wi.getWord((cache.currentUnit-1)*30+cache.currentIndex);
-            var cw =$.parseJSON(result);
-
-            cache.currentWord = cw;
+            var g = cache;
+            var result = wi.getWord(g.currentUnit.unit*DISPLAY_COUNT+g.currentWord+1);
+            var cw =JSON.parse(result);
 
             $('#cword').html(cw.word);
             $('#cpronounce').html(cw.pronounce);
@@ -229,7 +221,7 @@
                 if(str && str != ''){
                     var arr = str.split('|');
                     if(arr.length > 1){
-                        $('<span class="sentenceItem">'+ arr[0]+ '<br>'+ arr[1] +'</span>').appendTo(par);
+                        $('<li class="sentenceItem">'+ arr[0]+ '<br>'+ arr[1] +'</li>').appendTo(par);
                     }
                 }
             }
