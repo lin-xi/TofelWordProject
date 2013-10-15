@@ -21,8 +21,13 @@
 		
 		page.animate({translate: '0px, 0px'}, 1000, 'ease', function(){
 		});
-		
 
+        var url = location.href.split('#')[0] +'#'+ pageName;
+		var state = {
+        	title: pageName,
+        	url: url
+        };
+        window.history.pushState(state, document.title, url);
 	};
 
 	M.render = function(template, data){
