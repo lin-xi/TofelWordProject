@@ -65,6 +65,11 @@ public class WordtHandlerInterface extends BaseHandler{
         unitDao.updateStudyFlag(Integer.parseInt(unit), Integer.parseInt(flag));
     }
 
+    public void addStudyLog(String unit, String datetime, String studytype, String score, String costtime){
+        dao.insertStudylog(Integer.parseInt(unit), Integer.parseInt(datetime), Integer.parseInt(studytype), Integer.parseInt(score), Integer.parseInt(costtime));
+        unitDao.updateStudyFlag(Integer.parseInt(unit), 1);
+    }
+
     public void updateYesRate(String unit, String rate){
         unitDao.updateYesRate(Integer.parseInt(unit), Integer.parseInt(rate));
     }

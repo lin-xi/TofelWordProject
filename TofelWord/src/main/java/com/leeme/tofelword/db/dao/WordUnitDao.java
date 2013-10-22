@@ -83,7 +83,7 @@ public class WordUnitDao {
 
     public void updateStudyFlag(int unit, int flag) {
         try{
-            String sql = "update words_unit set flag = ? where unit = ?";
+            String sql = "update words_unit set study_flag = ? where unit = ?";
             db.execSQL(sql, new Integer[]{flag, unit});
         }catch (Exception ex){
             ex.printStackTrace();

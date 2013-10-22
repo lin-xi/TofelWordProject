@@ -85,9 +85,9 @@ public class WordDao {
         return logs;
     }
 
-    public void insertStudylog(int unit, int datetime, int studytype,  int score, int costtime) {
+    public void insertStudylog(int unit, int datetime, int studytype, int score, int costtime) {
         try{
-            String sql = "insert into studylog (datetime, groupid, studytype, score, costtime) values (?, ?, ?, ?, ?)";
+            String sql = "insert into studylog (datetime, unit, studytype, score, costtime) values (?, ?, ?, ?, ?)";
             db.execSQL(sql, new Integer[]{datetime, unit, studytype, score, costtime});
         }catch (Exception ex){
             ex.printStackTrace();

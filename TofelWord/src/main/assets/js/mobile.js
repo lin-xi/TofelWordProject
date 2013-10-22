@@ -1,39 +1,73 @@
 (function($){
-	var cache = {};
+	var cache = {}, events = {};
+	cache.process = false;
 
 	function M(){
 	}
 
-	M.navigate = function(pageName){
+	M.navigate = function(pageName, param){
 		var g = cache;
 		var app = $('.app-box'),
 			cur = $(g.current),
 			page = $(pageName);
-
-		var width = cur.width();
-		page.css('-webkit-transform', 'translate('+width+'px, 0px)');
-		page.show();
 		
-		g.current = pageName;
-		cur.animate({translate: '-'+width+'px, 0'}, 1000, 'ease', function(){
-			cur.hide();
-		});
-		
-		page.animate({translate: '0px, 0px'}, 1000, 'ease', function(){
-		});
+		if(!g.process){
+			g.process = true;
 
-        var url = location.href.split('#')[0] +'#'+ pageName;
-		var state = {
-        	title: pageName,
-        	url: url
-        };
-        window.history.pushState(state, document.title, url);
+			var width = cur.width();
+			page.css('-webkit-transform', 'translate('+width+'px, 0px)');
+			page.show();
+		
+			g.current = pageName;
+			cur.animate({translate: '-'+width+'px, 0'}, 1000, 'ease', function(){
+				cur.hide();
+			});
+		
+			page.animate({translate: '0px, 0px'}, 1000, 'ease', function(){
+				g.process = false;
+				M.emit('navigate', pageName, param);
+			});
+
+	        var url = location.href.split('#')[0] + pageName;
+			var state = {
+	        	title: pageName,
+	        	url: url
+	        };
+	        history.pushState(state, pageName, url);
+	    }
+	};
+
+	M.setTitle = function(title){
+		var g = cache;
+		var app = $('.app-box'),
+			cur = $(g.current);
+
+		cur.find('.page-header h3').html(title);
 	};
 
 	M.render = function(template, data){
         return template.replace(/\{\{([^\}\}]+)\}\}/g, function(s0, s1){
             return (data[s1]==undefined || data[s1]==null) ? '' : data[s1];
         });
+	};
+
+	M.on = function(type, fn){
+		if(!events[type]){
+			events[type] = [];
+		}
+		var handlers = events[type];
+		handlers.push(fn);
+	};
+
+	M.emit = function(type){
+		var args = Array.prototype.slice.call(arguments, 1);
+		var fn = events[type];
+		if(fn){
+			var i=0; len=fn.length;
+			for(; i<len; i++){
+				fn[i].apply(this, args);
+			}
+		}
 	};
 
 	function _init(){
@@ -61,6 +95,16 @@
 		_init();
 		_initPageHeader();
 	});
+
+	window.addEventListener('popstate', function(e){
+  		if (history.state){
+    		var state = e.state;
+    		console.log(state);
+    		if(state && state.title){
+    			M.navigate(state.title);
+    		}
+  		}
+	}, false);
 
 	window.M = M;
 })(Zepto);
