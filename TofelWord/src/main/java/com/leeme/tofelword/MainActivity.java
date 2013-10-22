@@ -20,21 +20,23 @@ import com.leeme.tofelword.handlers.WordtHandlerInterface;
 public class MainActivity extends Activity {
 
     private WebView mWebView = null;
+    private long exitTime = 0;
+
     private Handler mHandler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
-        try{
-            switch(msg.what){
-                case 200:
-                    Bundle bl = msg.getData();
-                    String param = bl.getString("uid") + ",{'code':200, 'content': "+ bl.getInt("result") + "}";
-                    mWebView.loadUrl("javascript:response("+param+")");
-                    break;
-            }
-            super.handleMessage(msg);
-        }catch (NullPointerException ex){
+            try{
+                switch(msg.what){
+                    case 200:
+                        Bundle bl = msg.getData();
+                        String param = bl.getString("uid") + ",{'code':200, 'content': "+ bl.getInt("result") + "}";
+                        mWebView.loadUrl("javascript:response("+param+")");
+                        break;
+                }
+                super.handleMessage(msg);
+            }catch (NullPointerException ex){
 
-        }
+            }
 
         }
     };
@@ -120,14 +122,24 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if ((keyCode == KeyEvent.KEYCODE_BACK) && mWebView.canGoBack()) {
-            mWebView.goBack();
-            //mWebView.loadUrl("javascript:keydown()");
-            return true;
-        }else{
+        if(keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN){
 
+            if (mWebView.canGoBack()) {
+                mWebView.goBack();
+                return true;
+            }else{
+                if((System.currentTimeMillis()-exitTime) > 2000){
+                    Toast.makeText(getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
+                    exitTime = System.currentTimeMillis();
+                }else{
+                    finish();
+                    System.exit(0);
+                }
+            }
+
+            return true;
         }
-        return false;
+        return super.onKeyDown(keyCode, event);
     }
 
 }
