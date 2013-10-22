@@ -25,7 +25,7 @@
                 <a href="#index"><i class="icon-home"></i></a>
                 <h3>托福单词</h3>
             </div>
-            <div class="page-content">
+            <div class="page-content main">
                 <ul class="user-info">
                     <li>
                         <img class="avatar" src="images/avatar.png"/>
@@ -64,9 +64,9 @@
                         <li id="wordunit" class="menu-item index"><span class="icon i-word"></span><span class="menu-text">记单词</span></li>
                         <li id="statistic" class="menu-item statistic"><span class="icon i-statistic"></span><span class="menu-text">统计</span></li>
                     </ul>
-                    <ul>
-                        <li id="setting" class="menu-item setting"><span class="icon i-setting"></span><span class="menu-text">设置</span></li>
-                        <li id="share" class="menu-item share"><span class="icon i-share"></span><span class="menu-text">分享</span></li>
+                    <ul class="row2">
+                        <li id="setting" class="menu-item setting"><span class="menu-text">设置</span><span class="icon i-setting"></span></li>
+                        <li id="share" class="menu-item share"><span class="menu-text">分享</span><span class="icon i-share"></span></li>
                     </ul>
                 </div>
             </div>
@@ -80,7 +80,7 @@
                 <h3>托福单词</h3>
             </div>
 
-            <div class="page-content">
+            <div class="page-content main">
                 <ul id="unit-wraper">
                 </ul>
             </div>
@@ -96,7 +96,7 @@
                 <h3>单词</h3>
             </div>
 
-            <div class="page-content">
+            <div class="page-content main">
                 <div class="outbox word-detail">
                     <div class="outbox-header">
                         <h3 id="cword"></h3>
@@ -105,11 +105,6 @@
                     <div class="outbox—content">
                         <p id="cpronounce">音标</p>
                         <p id="cmeaning">释义</p>
-                        <div class="button-area">
-                            <a class="btn"><i class="icon-sad"></i>&nbsp;不认识</a>
-                            <a class="btn"><i class="icon-neutral"></i>&nbsp;有印象</a>
-                            <a class="btn"><i class="icon-happy"></i>&nbsp;so easy</a>
-                        </div>
                     </div>
                 </div>
                 
@@ -124,9 +119,8 @@
                         </ul>
                     </div>
                 </div>
-            </div>
 
-            <div class="page-foot">
+
                 <div class="nav">
                     <a id="prev" class="btn btn-red"><i class="icon-chevron-sign-left"></i>&nbsp上一个</a>
                     <a id="next" class="btn btn-red">下一个&nbsp;<i class="icon-chevron-sign-right"></i></a>
@@ -154,6 +148,7 @@
     window.sentenceInterface.getSentence = function(){return '[{"sentences":"linxi|林溪一"}, {"sentences":"linxi2|林溪二"}, {"sentences":"linxi3|林溪三"}]';}
 */
 
+
     $('body').ready(function(){
         var wi = window.wordInterface,
             si = window.sentenceInterface;
@@ -169,7 +164,7 @@
             
             M.navigate('#units');
 
-            var template = '<li class="unit-item study_{{studyFlag}}" index="{{unit}}"><span class="unit">{{unit_label}}</span><span class="unit-desc"><p class="yesRate">{{yesRate}}</p><p class="level level-{{level}}"></p></span></li>';
+            var template = '<li class="unit-item study_{{studyFlag}}" index="{{unit}}"><span class="unit">{{unit_label}}</span><span class="unit-desc"><p class="level level-{{level}}">{{level}}</p></span></li>';
             var units = JSON.parse(wi.getUnits());
 
             g.units = units;
