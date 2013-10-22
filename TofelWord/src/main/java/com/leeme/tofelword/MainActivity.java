@@ -136,7 +136,6 @@ public class MainActivity extends Activity {
                     System.exit(0);
                 }
             }
-
             return true;
         }
         return super.onKeyDown(keyCode, event);
