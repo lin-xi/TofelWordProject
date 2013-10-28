@@ -164,10 +164,10 @@ a.btn.btn-red:active {background-color: #B32C24;border-color: rgba(0,0,0,0.9);}
 .main-menu .menu-item .menu-text{display:block;}
 .main-menu .row2 .menu-item{padding-top: 20px;}
 .main-menu .row2 .menu-item .menu-text{margin-bottom: 5px;}
-#wordunit{border-radius: 0 30% 0 30%;}
-#statistic{border-radius: 30% 0 30% 0;}
-#setting{border-radius: 30% 0 30% 0;}
-#share{border-radius: 0 30% 0 30%;}
+#wordunit{background-color: #E65E4E;}
+#statistic{background-color: #FA8327;}
+#setting{background-color: #FA9F06;}
+#share{background-color: 0 30% 0 30%;}
 
 #index .user-info{width: 100%; height: 100px; background-color: rgba(0, 0, 0, 0.5); text-align: center;}
 #index .user-info li{display: inline-block; vertical-align: middle; margin-right: 10px;}
