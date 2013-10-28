@@ -3,7 +3,7 @@ var Dialog = (function($){
     function create(cont, func){
         var uiDialog = $('<div class="ui-dialog"></div>'),
         content = $('<span class="tips-content"></span>'),
-        btnArea = $('<div class="btnArea"><a class="ok-btn"><span class="icon ok"></span></a><a class="cancel-btn"><span class="icon delete"></span></a></div>'),
+        btnArea = $('<div class="btnArea"><a class="ok-btn">确定</a></div>'),
         triangle = $('<span class="triangle4"></span>'),
 
         mask = $('<div class="ui-mask"></div>');
@@ -14,13 +14,13 @@ var Dialog = (function($){
         content.append( $('<span>').html(cont));
 
         mask.appendTo($('body'));
-        uiDialog.appendTo($('body')).fadeIn();
+        uiDialog.appendTo($('body'));
 
         var host = $(window),
             w = host.width(),
             h = host.height(),
-            tw = uiDialog.outerWidth(),
-            th = uiDialog.outerHeight(),
+            tw = uiDialog.width(),
+            th = uiDialog.height(),
             tleft, ttop;
         tleft = (w-tw)/2;
         ttop = (h-th)/2;
@@ -28,21 +28,15 @@ var Dialog = (function($){
         uiDialog.css({left: tleft, top: ttop});
 
         btnArea.find('.ok-btn').on('click', function(){
-            func();
-            mask.fadeOut(1000, function(){
-                mask.remove();
-            });
-            uiDialog.fadeOut(1000, function(){
-                uiDialog.remove();
-            });
+            if(func){
+                func();
+            }
+            mask.remove();
+            uiDialog.remove();
         });
         btnArea.find('.cancel-btn').on('click', function(){
-            mask.fadeOut(1000, function(){
-                mask.remove();
-            });
-            uiDialog.fadeOut(1000, function(){
-                uiDialog.remove();
-            });
+            mask.remove();
+            uiDialog.remove();
         });
     }
 
@@ -55,4 +49,4 @@ var Dialog = (function($){
         }
     }
 
-})(jQuery);
+})(Zepto);

@@ -16,5 +16,5 @@ body{overflow: hidden; background: #000;}
 .page-header a:hover{}
 
 
-.page-foot{width: 100%; background-color: #666; padding: 10px;}
+.page-foot{width: 100%; background-color: #FB5031; color: #FFF; border-radius: 0 0 10px 10px;}
 .page-content{position: relative; width: 100%; overflow-y: auto; background-color: #e0e0e0;}
