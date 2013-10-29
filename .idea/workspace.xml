@@ -4,6 +4,23 @@
     <list default="true" id="21745310-e5e1-4134-bb6e-2a21dca7cad5" name="Default" comment="" />
     <ignored path="TofelWordProject.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy8215640901557830153tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1382973703373" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy4184411943609652690tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1382973819606" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy1825737269901568973tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1382974175563" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy7708138190122266615tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1382974409298" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy3287510279975029859tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1382974493074" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy7705293876972271154tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1382974676093" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy5960611432047943567tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1382974797533" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy2387433066804857253tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1382974840899" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy793690345783467987tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1382975249052" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy4693329353065398221tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1382975375372" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy5835873798128471361tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1382975914589" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy4995446526345461247tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1382975955497" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy8864770888333134009tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383061970317" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy3821822571492777271tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383062118090" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy3479679135346445431tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383062185625" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy700209557677490088tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383062271775" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy7910358019577226515tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383062681566" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +75,25 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <method_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/TofelWord/src/main/java/com/leeme/tofelword/handlers/WordtHandlerInterface.java" line="67" class="com.leeme.tofelword.handlers.WordtHandlerInterface" package="com.leeme.tofelword.handlers">
+        <option name="WATCH_ENTRY" value="true" />
+        <option name="WATCH_EXIT" value="true" />
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </method_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -70,10 +106,21 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TofelWord/src/main/java/com/leeme/tofelword/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="590" selection-end="590" vertical-scroll-proportion="0.69942194">
+            <state line="134" column="29" selection-start="4535" selection-end="4535" vertical-scroll-proportion="3.3775215">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#691#1266#0" expanded="true" />
+                <element signature="e#1259#1260#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordtHandlerInterface.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TofelWord/src/main/java/com/leeme/tofelword/handlers/WordtHandlerInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="5" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -220,6 +267,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="handlers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TofelWordProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tofelword" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="db" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -281,7 +350,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
@@ -450,12 +519,12 @@
       <changelist id="21745310-e5e1-4134-bb6e-2a21dca7cad5" name="Default" comment="" />
       <created>1382427954261</created>
       <updated>1382427954261</updated>
-      <workItem from="1382969288782" duration="2580000" />
+      <workItem from="1382969288782" duration="5789000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2580000" />
+    <option name="totallyTimeSpent" value="5789000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -478,30 +547,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1384" height="738" extended-state="6" />
-    <editor active="false" />
+    <frame x="-9" y="-9" width="1384" height="738" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32752612" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34042552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2469697" sideWeight="0.6707317" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2469697" sideWeight="0.67247385" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32752612" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32978722" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -573,6 +642,8 @@
         <state line="8" column="29" selection-start="225" selection-end="225" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#691#1266#0" expanded="true" />
+            <element signature="e#1259#1260#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -582,11 +653,20 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TofelWord/src/main/java/com/leeme/tofelword/handlers/WordtHandlerInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="5" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TofelWord/src/main/java/com/leeme/tofelword/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="590" selection-end="590" vertical-scroll-proportion="0.69942194">
+        <state line="134" column="29" selection-start="4535" selection-end="4535" vertical-scroll-proportion="3.3775215">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#691#1266#0" expanded="true" />
+            <element signature="e#1259#1260#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -643,7 +723,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Android|main</last-edited>
+          <last-edited>r</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -655,7 +735,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>android-support-v4</last-edited>
+          <last-edited>libs</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
