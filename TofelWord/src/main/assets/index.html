@@ -19,12 +19,17 @@
 
 <body>
     <div class="app-box">
-        <!--首页开始 -->
-        <div class="page-box" id="index">
-            <div class="page-header">
-                <h3>托福单词</h3>
-            </div>
-            <div class="page-content main">
+
+        <div class="page-header">
+            <a><i></i></a>
+            <h3>托福单词</h3>
+            <a><i></i></a>
+        </div>
+
+        <div class="page-content">
+
+            <!--首页开始 -->
+            <div class="page-box" id="index">
                 <ul class="user-info">
                     <li>
                         <img class="avatar" src="images/avatar.png"/>
@@ -59,58 +64,28 @@
                 </ul>
 
                 <div class="main-menu">
-                    <ul>
-                        <li id="wordunit" class="menu-item index"><span class="icon i-word"></span><span class="menu-text">记单词</span></li>
-                        <li id="statistic" class="menu-item statistic"><span class="icon i-statistic"></span><span class="menu-text">统计</span></li>
-                    </ul>
-                    <ul class="row2">
-                        <li id="setting" class="menu-item setting"><span class="menu-text">设置</span><span class="icon i-setting"></span></li>
-                        <li id="share" class="menu-item share"><span class="menu-text">分享</span><span class="icon i-share"></span></li>
-                    </ul>
+                    <p>
+                        <a id="wordunit" href="#units" class="menu-item index"><span class="icon i-word"></span><span class="menu-text">记单词</span></a>
+                        <a id="statistic" class="menu-item statistic"><span class="icon i-statistic"></span><span class="menu-text">统计</span></a>
+                    </p>
+                    <p class="row2">
+                        <a id="setting" class="menu-item setting"><span class="menu-text">设置</span><span class="icon i-setting"></span></a>
+                        <a id="share" class="menu-item share"><span class="menu-text">分享</span><span class="icon i-share"></span></a>
+                    </p>
                 </div>
             </div>
-            <div class="page-foot">
-                <ul class="menu">
-                    <li class="menu-item"><a href="#units">记单词</a></li>
-                    <li class="split"></li>
-                    <li class="menu-item"><a href="#review">复习</a></li>
-                    <li class="split"></li>
-                    <li class="menu-item"><a href="#share">分享</a></li>
-                    <li class="split"></li>
-                    <li class="menu-item"><a href="#setting">设置</a></li>
-                </ul>
-            </div>
-        </div>
-        <!--首页结束-->
+            <!--首页结束-->
 
-        <!--单元列表开始 -->
-        <div class="page-box" id="units">
-            <div class="page-header">
-                <a href="#index"><i class="icon-home"></i></a>
-                <h3>托福单词</h3>
-            </div>
-
-            <div class="page-content main">
+            <!--单元列表开始 -->
+            <div class="page-box" id="units">
                 <ul id="unit-wraper">
                 </ul>
             </div>
+            <!--单元列表结束 -->
 
-            <div class="page-foot">
-                
-            </div>
+            <!--单词详情页开始 -->
+            <div class="page-box" id="word">
 
-        </div>
-        <!--单元列表结束 -->
-
-        <!--单词详情页开始 -->
-        <div class="page-box" id="word">
-
-            <div class="page-header">
-                <a href="#units"><i class="icon-grid"></i></a>
-                <h3>单词</h3>
-            </div>
-
-            <div class="page-content main">
                 <div class="outbox word-detail">
                     <div class="outbox-header">
                         <h3 id="cword"></h3>
@@ -133,30 +108,12 @@
                         </ul>
                     </div>
                 </div>
-                
             </div>
-
-            <div class="page-foot">
-                <div class="nav">
-                    <a id="prev" class="btn btn-red"><i class="icon-chevron-sign-left"></i>&nbsp上一个</a>
-                    <a id="next" class="btn btn-red">下一个&nbsp;<i class="icon-chevron-sign-right"></i></a>
-                </div>
-            </div>
-
-        </div>
-        <!--单词详情页结束-->
+            <!--单词详情页结束-->
 
 
-
-        <!--复习单词页开始 -->
-        <div class="page-box" id="review">
-
-            <div class="page-header">
-                <a href="#index"><i class="icon-home"></i></a>
-                <h3>复习</h3>
-            </div>
-
-            <div class="page-content main">
+            <!--复习单词页开始 -->
+            <div class="page-box" id="review">
                 <div class="outbox word-detail">
                     <div class="outbox-header">
                     </div>
@@ -164,9 +121,22 @@
                     <div class="outbox—content">
                     </div>
                 </div>
-                
             </div>
 
+        </div>
+
+
+        <div class="page-foot">
+            <ul class="menu">
+                <div class="indicator"></div>
+                <li class="menu-item"><a href="#units">记单词</a></li>
+                <li class="split"></li>
+                <li class="menu-item"><a href="#review">复习</a></li>
+                <li class="split"></li>
+                <li class="menu-item"><a href="#share">分享</a></li>
+                <li class="split"></li>
+                <li class="menu-item"><a href="#setting">设置</a></li>
+            </ul>
         </div>
 
 
@@ -207,25 +177,23 @@
                     navigatePageUnits();
                 break;
                 case '#word':
-                    navigatePageWord(param);
+                    navigatePageWord();
                 break;
             }
         });
-
-        //记单词
-        $('#wordunit').on('click', function(){
-            M.navigate('#units');
-        });
-        $('#unit-wraper').delegate('.unit-item', 'click', function(e){
-            M.navigate('#word', e);
-        });
-        
 
         function navigatePageUnits(){
             var template = '<li class="unit-item study_{{studyFlag}}" index="{{unit}}"><span class="unit">{{unit_label}}</span><span class="unit-desc"><p class="level level-{{level}}">{{level}}</p></span></li>';
             var units = JSON.parse(wi.getUnits());
 
             g.units = units;
+
+            M.setHead({
+                title: '单元列表',
+                leftIcon: 'icon-home',
+                leftHref: '#index'
+            });
+            M.resetFoot();
 
             var par = $('#unit-wraper');
             par.empty();
@@ -238,51 +206,58 @@
                     level : un.reviewLevl,
                     studyFlag : un.studyFlag == 1 ? 'yes' : 'no'
                 }
-
                 par.append(M.render(template, data));
             }
+
+            par.delegate('.unit-item', 'click', function(e){
+                var tar = $(e.currentTarget);
+
+                g.page = "#word";
+                var unit = tar.attr('index');
+                g.currentUnit = g.units[unit];
+                g.currentWord = g.currentUnit.lastWordIndex-0;
+
+                M.navigate('#word');
+            });
         }
 
-        function navigatePageWord(e){
-            var g = cache;
-            var tar = $(e.currentTarget);
+        function navigatePageWord(){
+            M.setHead({
+                leftIcon: 'icon-grid',
+                leftHref: '#units'
+            });
 
-            g.page = "#word";
-            var unit = tar.attr('index');
-            g.currentUnit = g.units[unit];
-            console.log(g.currentUnit);
-            g.currentWord = g.currentUnit.lastWordIndex-0;
-
+            M.setFoot('<div class="nav"><a id="prev" class="btn btn-red"><i class="icon-chevron-sign-left"></i>&nbsp上一个</a><a id="next" class="btn btn-red">下一个&nbsp;<i class="icon-chevron-sign-right"></i></a></div>', function(context){
+                context.find('#prev').on('click', function(e){
+                    if(g.currentWord>1){
+                        g.currentWord--;
+                        displayWord();
+                    }
+                });
+                context.find('#next').on('click', function(e){
+                    if(g.currentWord<DISPLAY_COUNT){
+                        g.currentWord++;
+                        displayWord();
+                    }else{
+                        Dialog.alert('本单元已学习完成', function(){
+                            M.navigate('#units');
+                            wi.addStudyLog(g.currentUnit.unit, Math.round(new Date().getTime()/1000)+'', 1, 0, 0);
+                        });
+                    }
+                });
+            });
             displayWord();
         }
 
         
-        $('#prev').on('click', function(e){
-            var g = cache;
-            if(g.currentWord>1){
-                g.currentWord--;
-                displayWord();
-            }
-        });
-        $('#next').on('click', function(e){
-            var g = cache;
-            if(g.currentWord<DISPLAY_COUNT){
-                g.currentWord++;
-                displayWord();
-            }else{
-                Dialog.alert('本单元已学习完成', function(){
-                    M.navigate('#units');
-                    wi.addStudyLog(g.currentUnit.unit, Math.round(new Date().getTime()/1000)+'', 1, 0, 0);
-                });
-            }
-        });
-
         function displayWord(){
             var g = cache;
             var result = wi.getWord(g.currentUnit.unit*DISPLAY_COUNT+g.currentWord+1);
             var cw =JSON.parse(result);
 
-            M.setTitle(cw.word);
+            M.setHead({
+                title: cw.word
+            });
 
             $('#cword').html(cw.word);
             $('#cpronounce').html(cw.pronounce);

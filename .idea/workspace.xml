@@ -21,6 +21,15 @@
     <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy3479679135346445431tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383062185625" ignored="false" />
     <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy700209557677490088tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383062271775" ignored="false" />
     <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy7910358019577226515tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383062681566" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy2292894378175109760tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383234764496" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy8192470198957244933tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383235199629" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy3137216261235781444tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383235347213" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy1506676757914052127tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383235865651" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy8967811950893942645tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383236298037" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy7764623527411726826tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383236621509" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy6657704051816504805tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383236799542" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy1339908826172355643tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383236981559" ignored="false" />
+    <file path="$USER_HOME$/AppData/Local/Temp/android_manifest_copy5708515952889806992tmp/AndroidManifest.xml" changelist="21745310-e5e1-4134-bb6e-2a21dca7cad5" time="1383237188910" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +115,7 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TofelWord/src/main/java/com/leeme/tofelword/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="29" selection-start="4535" selection-end="4535" vertical-scroll-proportion="3.3775215">
+            <state line="29" column="24" selection-start="848" selection-end="848" vertical-scroll-proportion="0.610951">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#691#1266#0" expanded="true" />
@@ -519,12 +528,12 @@
       <changelist id="21745310-e5e1-4134-bb6e-2a21dca7cad5" name="Default" comment="" />
       <created>1382427954261</created>
       <updated>1382427954261</updated>
-      <workItem from="1382969288782" duration="5789000" />
+      <workItem from="1382969288782" duration="9008000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5789000" />
+    <option name="totallyTimeSpent" value="9008000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -547,7 +556,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1384" height="738" extended-state="7" />
+    <frame x="-9" y="-9" width="1384" height="738" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -662,7 +671,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TofelWord/src/main/java/com/leeme/tofelword/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="29" selection-start="4535" selection-end="4535" vertical-scroll-proportion="3.3775215">
+        <state line="29" column="24" selection-start="848" selection-end="848" vertical-scroll-proportion="0.610951">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#691#1266#0" expanded="true" />
